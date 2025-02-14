@@ -1,0 +1,140 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(#053a44, #200476);
+}
+
+/* Sparkle Styles */
+@keyframes sparkleAnimation {
+    0% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.5) rotate(180deg);
+    }
+}
+
+.sparkle {
+    position: absolute;
+    color: gold;
+    /* Star color */
+    font-size: 20px;
+    /* Adjust star size */
+    pointer-events: none;
+    animation: sparkleAnimation 0.5s ease-out forwards;
+    z-index: 9999;
+}
+
+/* Header Styles */
+.animated-navbar {
+    background-size: 300% 300%;
+    padding: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-link,
+.dropdown-toggle {
+    font-size: 18px;
+    /* Increased Font Size */
+    font-weight: bold;
+}
+
+.search-container {
+    width: 200px;
+    /* Adjusted width */
+}
+
+.search-input {
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+.contact-btn {
+    border-radius: 20px;
+    padding: 8px 15px;
+}
+
+/* Logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    /* Makes it feel clickable */
+}
+
+/* Card Styles */
+.card {
+    background: linear-gradient(#939294, #000000);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    color: #f0f8ff;
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Background Slider */
+.background-slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.background-slider img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.background-slider img.active {
+    opacity: 0.6;
+    /* Adjust transparency */
+}
+
+/* Hero Content Styling */
+.container-fluid {
+    position: relative;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.8);
+    /* Slight white tint */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.card {
+    border: #f6f2f2;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 14px 20px rgba(237, 235, 237, 0.1);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(#939294, #000000);
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
