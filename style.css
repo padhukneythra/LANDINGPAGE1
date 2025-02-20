@@ -21,13 +21,11 @@ body {
 
 .sparkle {
     position: absolute;
-    color: gold;
-    /* Star color */
-    font-size: 20px;
-    /* Adjust star size */
-    pointer-events: none;
-    animation: sparkleAnimation 0.5s ease-out forwards;
-    z-index: 9999;
+    color: #FFD700; /* Gold color */
+    font-size: 12px;
+    pointer-events: none; /* Ensures sparkles don't interfere with clicks */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    z-index: 9999; /* Ensures sparkles appear on top */
 }
 
 /* Header Styles */
@@ -131,6 +129,84 @@ body {
     box-shadow: 0px 14px 20px rgba(237, 235, 237, 0.1);
 }
 
+/* About */
+#about .about-card h2,
+#about .about-card p {
+    transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+#about .about-card:hover h2 {
+    color: #008080 !important; /* Teal */
+}
+
+#about .about-card:hover p {
+    color: #008080 !important; /* Teal */
+    font-size: 1.1rem; /* Slightly bigger font */
+}
+
+/* career */
+.transition {
+    transition: all 0.5s ease-in-out;
+}
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+.btn-teal {
+    background-color: #008080;
+    color: white;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+}
+.btn-teal:hover {
+    background-color: #005F56;
+}
+
+/* contact */
+.transition {
+    transition: all 0.5s ease-in-out;
+}
+.btn-teal {
+    background-color: #008080;
+    color: white;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+}
+.btn-teal:hover {
+    background-color: #005F56;
+}
+.scale-90 {
+    transform: scale(0.9);
+}
+.opacity-0 {
+    opacity: 0;
+}
+.opacity-100 {
+    opacity: 1;
+}
+.scale-100 {
+    transform: scale(1);
+}
+
+/* Hover Effect for Contact Text */
+.contact-hover {
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.contact-hover:hover {
+    color: #20c997; /* Light Teal */
+    transform: scale(0.95); /* Slight Zoom Out */
+}
+
+/* Custom Button Style */
+.btn-teal {
+    background-color: #008080;
+    color: white;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-teal:hover {
+    background-color: #070c61;
+}
 /* Footer */
 footer {
     background: linear-gradient(#939294, #000000);

@@ -8,18 +8,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+
+
+    <!-- Alpine.js -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
     <!-- gsap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- Owl Carousel JS -->
-    <script src="assets/owl-carousel/owl.carousel.min.js"></script>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <script src="https://kit.fontawesome.com/4843aa3b3b.js" crossorigin="anonymous"></script>
 </head>
@@ -95,9 +93,100 @@
         </div>
     </section>
 
-   
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card rounded-4 shadow-lg border-4 about-card">
+                        <div class="card-body p-4">
+                            <h2 class="text-center text-dark mb-3"><b>About</b></h2>
+                            <p class="text-muted">
+                                <b>GASPV Enertech Solutions is committed to pioneering advancements in engineering and
+                                    technology.
+                                    Our mission is to innovate, optimize, and deliver cutting-edge solutions that drive
+                                    sustainable progress.
+                                    We believe in the power of technology to create a better future, and our team is
+                                    dedicated to achieving
+                                    excellence in every project.</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- You can use latest version of jQuery  -->
+
+    <!-- CAREER SECTION -->
+    <section id="career" class="py-5 bg-white">
+        <div class="container text-center">
+            <h2 class="fs-2 fw-bold text-dark mb-4 opacity-0 scale-90 transition" id="career-heading">Join Our Team</h2>
+            <p class="text-muted">We are looking for passionate individuals.</p>
+
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="bg-light p-4 rounded shadow-sm transition hover-scale">
+                        <h4 class="fs-4 fw-semibold">Software Engineer</h4>
+                        <p class="text-muted">Develop and maintain web applications.</p>
+                        <button class="btn btn-teal mt-3">Apply Now</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="bg-light p-4 rounded shadow-sm transition hover-scale">
+                        <h4 class="fs-4 fw-semibold">Project Manager</h4>
+                        <p class="text-muted">Lead teams and ensure project success.</p>
+                        <button class="btn btn-teal mt-3">Apply Now</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="bg-light p-4 rounded shadow-sm transition hover-scale">
+                        <h4 class="fs-4 fw-semibold">Data Analyst</h4>
+                        <p class="text-muted">Analyze and interpret data insights.</p>
+                        <button class="btn btn-teal mt-3">Apply Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-5 text-white">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="contact-hover transition">Get in Touch</h2>
+                <p class="contact-hover">Have questions? Reach out to us.</p>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-6 mt-4">
+                    <h3 class="contact-hover mb-3 "><b>Contact Details</b></h3>
+                    <p class="contact-hover"><i class="fa-solid fa-envelope"></i> support@gaspv.com</p>
+                    <p class="contact-hover"><i class="fa-solid fa-phone"></i> +1-800-123-4567</p>
+                    <p class="contact-hover"><i class="fa-solid fa-map-marker-alt"></i> Chennai, India</p>
+                </div>
+                <div class="col-md-6 mt-4">
+                    <form>
+                        <input type="text" class="form-control bg-dark text-white mb-3" placeholder="Your Name">
+                        <input type="email" class="form-control bg-dark text-white mb-3" placeholder="Your Email">
+                        <textarea class="form-control bg-dark text-white mb-3" rows="4"
+                            placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn-teal w-100">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Alpine.js for Intersection Observer -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+
+
+
+    <!--latest version of jQuery  -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 
@@ -118,8 +207,6 @@
             yoyo: true,
             ease: "linear"
         });
-
-
 
         // Hover Zoom Effect for Navbar Items
         document.querySelectorAll(".nav-link, .dropdown-toggle, .contact-btn, .navbar-brand").forEach((item) => {
@@ -153,6 +240,66 @@
 
 
     </script>
+
+    <!-- Animate about section Background Gradient -->
+
+    <script>
+        gsap.to("#about", {
+            backgroundImage: "linear-gradient(45deg, #050505, #65737E)", // Light Gray to Dark Gray
+            duration: 5,
+            repeat: -1,
+            yoyo: true,
+            ease: "linear"
+        });
+    </script>
+
+    <!-- career section scripts -->
+
+    <!-- Intersection Observer for Animation -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let heading = document.getElementById("career-heading");
+            let observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        heading.classList.add("opacity-100", "scale-100");
+                        heading.classList.remove("opacity-0", "scale-90");
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            observer.observe(heading);
+        });
+    </script>
+
+    <!-- contact script -->
+    <script>
+
+        gsap.to("#contact", {
+            backgroundImage: "linear-gradient(45deg, #222222, #444444, #666666, #222222)",
+            duration: 5,
+            repeat: -1,
+            yoyo: true,
+            ease: "linear"
+        });
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            let heading = document.getElementById("contact-heading");
+            let observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        heading.classList.add("opacity-100", "scale-100");
+                        heading.classList.remove("opacity-0", "scale-90");
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            observer.observe(heading);
+        });
+
+    </script>
+
 
     <!-- Swiper Initialization -->
     <script>
@@ -203,7 +350,7 @@
                 <!-- Social Media Section -->
                 <div class="col-md-3">
                     <h5 class="mb-3">Follow Us</h5>
-                    <div class="d-flex gap-3">
+                    <div class="d-flex gap-3 justify-content-center">
                         <a href="#" class="text-light"><i class="fa-brands fa-facebook fa-xl"></i></a>
                         <a href="#" class="text-light"><i class="fa-brands fa-twitter fa-xl"></i></a>
                         <a href="#" class="text-light"><i class="fa-brands fa-instagram fa-xl"></i></a>
@@ -240,7 +387,7 @@
             }
 
             images[current].classList.add("active");
-            setInterval(changeImage, 4000); // Change image every 4 seconds
+            setInterval(changeImage, 4000); 
         });
 
     </script>
@@ -248,26 +395,36 @@
 
     <!-- SPARKLE EFFECT -->
     <script>
-        document.addEventListener('mousemove', (e) => {
-            const sparkle = document.createElement('div');
-            sparkle.classList.add('sparkle');
-            sparkle.innerHTML = '★'; // Star shape
+        document.addEventListener('DOMContentLoaded', () => {
+            document.addEventListener('mousemove', (e) => {
+                const sparkle = document.createElement('div');
+                sparkle.classList.add('sparkle');
+                sparkle.innerHTML = '★'; // Star shape
 
-            document.body.appendChild(sparkle);
+                document.body.appendChild(sparkle);
 
-            const x = e.clientX;
-            const y = e.clientY;
+                const x = e.clientX;
+                const y = e.clientY;
 
-            sparkle.style.position = 'absolute';
-            sparkle.style.left = `${x}px`;
-            sparkle.style.top = `${y}px`;
+                sparkle.style.left = `${x}px`;
+                sparkle.style.top = `${y}px`;
 
-            setTimeout(() => {
-                sparkle.remove();
-            }, 500);
+                //sparkles appear above all content
+                sparkle.style.position = 'fixed';
+                sparkle.style.zIndex = '9999';
+
+                // animation for smooth movement
+                setTimeout(() => {
+                    sparkle.style.opacity = '0';
+                    sparkle.style.transform = 'scale(1.5)';
+                    setTimeout(() => {
+                        sparkle.remove();
+                    }, 500);
+                }, 100);
+            });
         });
-
     </script>
+
 </body>
 
 </html>
